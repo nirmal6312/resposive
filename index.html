@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .bg {
+        background-color: black;
+        height: 300px;
+        width: 30%;
+        margin: 10px;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bg img{width: 100%;}
+
+      @media screen and (max-width:600px){
+  .main{display: block!important;}
+  .bg{width: 90%!important;}
+
+      }
+    </style>
+
+    <div class="main">
+      <div class="bg">
+        <img src="./download.jfif" />
+      </div>
+      <div class="bg">
+        <img src="./download.jfif" />
+      </div>
+      <div class="bg">
+        <img src="./download.jfif" />
+      </div>
+    </div>
+  </body>
+</html>

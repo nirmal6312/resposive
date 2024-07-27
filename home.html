@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      maths = eval(prompt("enter your maths marks"));
+      science = eval(prompt("enter your science marks"));
+
+      if (maths >= 33) {
+        if (science >= 33) {
+          document.write("you are pass in maths or science");
+          hindi = eval(prompt("enter your hindi marks"));
+          english = eval(prompt("enter your english marks"));
+          computer = eval(prompt("enter your computer marks"));
+
+          if (hindi >= 33) {
+            if (english >= 33) {
+              if (computer >= 33) {
+                total = maths + science + hindi + english + computer;
+                document.write(`<br/>`);
+                document.write(`your total marks is = ${total}`);
+
+                document.write(`<br/>`);
+
+                percentage = total / 5;
+                document.write(`your percentage is = ${percentage}`);
+
+                document.write(`<br/>`);
+
+                if (percentage >= 90) {
+                  document.write(`<h3 style="color: green;">Grade is A </h3>`);
+                } else if (percentage >= 70) {
+                  document.write(`<h3 style="color: orange;">Grade is B </h3>`);
+                } else if (percentage >= 50) {
+                  document.write(`<h3 style="color: yellow;">Grade is c </h3>`);
+                } else if (percentage >= 33) {
+                  document.write(`<h3 style="color: red;">Grade is D </h3>`);
+                } else {
+                  document.write(`<h3 style="color: red;">you are fail</h3>`);
+                }
+
+                document.write(`
+<table border="3px" cellsapcing="6px" cellpadding="6px">
+      <tr>
+        <th>Maths</th>
+        <th>Science</th>
+        <th>English</th>
+        <th>Hindi</th>
+        <th>Computer</th>
+        <th>Total</th>
+        <th>percentage</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td>${maths}</td>
+        <td>${science}</td>
+        <td>${english}</td>
+        <td>${hindi}</td>
+        <td>${computer}</td>
+        <td>${total}</td>
+        <td>${percentage}</td>
+        <td>null</td>
+      </tr>
+
+    </table>
+                
+                `);
+              } else {
+                document.write("you are fail in computer");
+              }
+            } else {
+              document.write("you are fail in english");
+            }
+          } else {
+            document.write("you are fail in hindi");
+          }
+        } else {
+          document.write("you are fail in science");
+        }
+      } else {
+        document.write("you are fail in maths");
+      }
+    </script>
+  </body>
+</html>
